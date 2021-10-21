@@ -10,11 +10,11 @@ body {
 #console {
 	font-family: courier, monospace;
 	color: #fff;
-	width:750px;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:100px;
-	font-size:14px;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 128px;
+	font-size: 1em;
 }
 
 a {
@@ -46,4 +46,23 @@ a {
     	0%  { color:  #0f0; }
     	50% { color:  #0f0; }
     	99% { color: black; }
+}
+
+/* Make sure console adjusts to mobile screens */
+@media screen and (max-width: 600px) {
+
+	#console {
+		width: 90%;
+		margin-top: 32px;
+	}
+
+}
+
+@media screen and (max-width: 1400px) {
+
+	#console {
+		margin-top: 64px;
+		width:80%;
+	}
+
 }
