@@ -96,7 +96,7 @@ function replaceUrls(text) {
 }
 
 Typer.speed = 3;
-Typer.file = 'ivo-cavelti.txt';
+Typer.file = 'ivo_cavelti/about_me/ivo-cavelti.txt';
 Typer.init();
 
 var timer = setInterval('t();', 30);
