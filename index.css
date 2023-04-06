@@ -7,6 +7,10 @@ body {
 	background-color: #000
 }
 
+.contact_element {
+	margin: 4px 0;
+}
+
 #console {
 	font-family: courier, monospace;
 	color: #fff;
