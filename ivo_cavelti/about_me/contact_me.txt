@@ -6,3 +6,4 @@
 <p class="contact_element">Matrix: ivo.cavelti[at]matrix.org</p>
 <p class="contact_element">E-Mail: contact[at]cavelti.dev</p>
 
+<a href="index.html">Go back</a>
