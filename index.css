@@ -26,24 +26,20 @@ a {
 	text-decoration: none;
 }
 
-#a {
+.a {
 	color: #0f0;
 }
 
-#c {
+.c {
 	color: #0bc;
 }
 
-#b {
+.b {
 	color: #ff0096;
 }
 
-#k {
+.k {
     	animation: change 1s;
-}
-
-#op{
-    	color: #888888
 }
 
 @keyframes change {

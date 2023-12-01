@@ -1,5 +1,5 @@
-<span id="a">ivo@cavelti-host</span>:<span id="b">~</span><span id="c">$</span> cd ivo_cavelti/about_me
-<span id="a">ivo@cavelti-host</span>:<span id="b">~/ivo_cavelti/about_me</span><span id="c">$</span> cat contact_me.txt<br/><br/>
+<span class="a">ivo@cavelti-host</span>:<span class="b">~</span><span class="c">$</span> cd ivo_cavelti/about_me
+<span class="a">ivo@cavelti-host</span>:<span class="b">~/ivo_cavelti/about_me</span><span class="c">$</span> cat contact_me.txt<br/><br/>
 
 <p>You can reach me on these platforms:</p>
 <p class="contact_element"><a href="https://swiss.social/@ivocavelti">Mastodon</a></p>

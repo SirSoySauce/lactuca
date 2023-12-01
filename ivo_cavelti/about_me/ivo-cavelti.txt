@@ -1,5 +1,5 @@
-<span id="a">ivo@cavelti-host</span>:<span id="b">~</span><span id="c">$</span> cd ivo_cavelti/about_me
-<span id="a">ivo@cavelti-host</span>:<span id="b">~/ivo_cavelti/about_me</span><span id="c">$</span> cat ivo-cavelti.txt<br/><br/>
+<span class="a">ivo@cavelti-host</span>:<span class="b">~</span><span class="c">$</span> cd ivo_cavelti/about_me
+<span class="a">ivo@cavelti-host</span>:<span class="b">~/ivo_cavelti/about_me</span><span class="c">$</span> cat ivo-cavelti.txt<br/><br/>
 
 <p>Hey There! I am Ivo Cavelti.</p>
 <p>Currently, I am doing my part-time bachelor in Computer Science at the University of Applied Sciences "OST" in Rapperswil. The days of the week when I'm not studying next to Lake Zurich, I work for the Swiss telecom company <a href="https://www.swisscom.ch/">Swisscom</a>.</p>
@@ -9,4 +9,3 @@ Mainly, I work with Java / Spring, Python or Angular / ReactJS. But I am always 
 <p><a href="contact_me.html">Here</a> you can find out how to reach me!</p>
 
 <p>Have a nice day!</p>
-
