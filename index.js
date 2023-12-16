@@ -21,6 +21,7 @@ function removeLastCharacter(consoleContent) {
 function addNextCharacter() {
     index += SPEED;
     setConsoleContent(text.slice(0, index));
+    window.scrollBy(0, 50);
 }
 
 function toggleCursor() {
