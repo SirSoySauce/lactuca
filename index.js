@@ -1,65 +1,48 @@
-const consoleContent = document.getElementById('console-content');
-const dynamicConsoleNative = document.getElementById('dynamic-console')
+const staticConsoleContent = document.getElementById('console-content').innerHTML;
+const console = document.getElementById('dynamic-console');
 
-const Typer = {
-    text: '',
-    accessCountimer: null,
-    index: 0,
-    speed: 3,
-    init: function () {
-        this.accessCountimer = setInterval(function () {
-            Typer.updLstChr();
-        }, 500);
-        Typer.text = consoleContent.innerHTML;
-        Typer.text = Typer.text.slice(0, Typer.text.length - 1).trim();
-    },
+function getDynamicConsoleContent() {
+    return console.innerHTML;
+}
 
-    content: function () {
-        return dynamicConsoleNative.innerHTML;
-    },
+function appendToConsoleContent(str) {
+    console.innerHTML += str;
+}
 
-    append: function (str) {
-        dynamicConsoleNative.innerHTML += str;
-        return false;
-    },
+function setConsoleContent(str) {
+    console.innerHTML = str;
+}
 
-    write: function (str) {
-        dynamicConsoleNative.innerHTML = str;
-        return false;
-    },
+function lastCharacterIsCursor(consoleContent) {
+    return consoleContent.substring(consoleContent.length - 1, consoleContent.length) === '|';
+}
 
+function removeLastCharacter(consoleContent) {
+    setConsoleContent(consoleContent.substring(0, consoleContent.length - 1));
+}
 
-    addText: function () {
-        const cont = Typer.content();
-        if (cont.substring(cont.length - 1, cont.length) === '|') {
-            this.write(this.content().substring(0, cont.length - 1));
-        }
+function addNextCharacter() {
+    index += speed;
+    setConsoleContent(text.substring(0, index));
+}
 
-        Typer.index += Typer.speed;
-        const text = Typer.text.substring(0, Typer.index);
-
-        this.write(text)
-        window.scrollBy(0, 50);
-    },
-
-    updLstChr: function () {
-        const cont = this.content();
-
-        if (cont.substring(cont.length - 1, cont.length) === '|') {
-            this.write(this.content().substring(0, cont.length - 1));
-        } else {
-            this.append('|');
-        }
-    },
-};
-Typer.init();
-
-const timer = setInterval('t();', 30);
-
-function t() {
-    Typer.addText();
-
-    if (Typer.index > Typer.text.length) {
-        clearInterval(timer);
+function updateLastCharacter() {
+    const consoleContent = getDynamicConsoleContent();
+    if (lastCharacterIsCursor(consoleContent)) {
+        removeLastCharacter(consoleContent);
+    } else {
+        appendToConsoleContent('|');
     }
 }
+
+let index = 0;
+const speed = 3;
+const text = staticConsoleContent.slice(0, staticConsoleContent.length - 1).trim();
+
+const timer = setInterval(() => {
+    addNextCharacter();
+    if (index > text.length) {
+        clearInterval(timer);
+    }
+}, 30);
+setInterval(() => updateLastCharacter(), 500);
