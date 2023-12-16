@@ -1,7 +1,8 @@
 const staticConsoleContent = document.getElementById('console-content').innerHTML;
 const console = document.getElementById('dynamic-console');
+const CURSOR = '|';
 
-function getDynamicConsoleContent() {
+function getConsoleContent() {
     return console.innerHTML;
 }
 
@@ -14,11 +15,11 @@ function setConsoleContent(str) {
 }
 
 function lastCharacterIsCursor(consoleContent) {
-    return consoleContent.substring(consoleContent.length - 1, consoleContent.length) === '|';
+    return consoleContent.slice(-1) === '|';
 }
 
 function removeLastCharacter(consoleContent) {
-    setConsoleContent(consoleContent.substring(0, consoleContent.length - 1));
+    setConsoleContent(consoleContent.slice(0, -1));
 }
 
 function addNextCharacter() {
@@ -27,11 +28,11 @@ function addNextCharacter() {
 }
 
 function updateLastCharacter() {
-    const consoleContent = getDynamicConsoleContent();
+    const consoleContent = getConsoleContent();
     if (lastCharacterIsCursor(consoleContent)) {
         removeLastCharacter(consoleContent);
     } else {
-        appendToConsoleContent('|');
+        appendToConsoleContent(CURSOR);
     }
 }
 
