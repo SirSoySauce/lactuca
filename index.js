@@ -1,7 +1,3 @@
-const staticConsoleContent = document.getElementById('console-content').innerHTML;
-const console = document.getElementById('dynamic-console');
-const CURSOR = '|';
-
 function getConsoleContent() {
     return console.innerHTML;
 }
@@ -23,11 +19,11 @@ function removeLastCharacter(consoleContent) {
 }
 
 function addNextCharacter() {
-    index += speed;
-    setConsoleContent(text.substring(0, index));
+    index += SPEED;
+    setConsoleContent(text.slice(0, index));
 }
 
-function updateLastCharacter() {
+function toggleCursor() {
     const consoleContent = getConsoleContent();
     if (lastCharacterIsCursor(consoleContent)) {
         removeLastCharacter(consoleContent);
@@ -36,14 +32,18 @@ function updateLastCharacter() {
     }
 }
 
-let index = 0;
-const speed = 3;
-const text = staticConsoleContent.slice(0, staticConsoleContent.length - 1).trim();
+const CURSOR = '|';
+const SPEED = 3;
 
-const timer = setInterval(() => {
+const console = document.getElementById('dynamic-console');
+const text = document.getElementById('console-content').innerHTML.trim();
+
+let index = 0;
+
+const typer = setInterval(() => {
     addNextCharacter();
     if (index > text.length) {
-        clearInterval(timer);
+        clearInterval(typer);
     }
 }, 30);
-setInterval(() => updateLastCharacter(), 500);
+setInterval(() => toggleCursor(), 500);
