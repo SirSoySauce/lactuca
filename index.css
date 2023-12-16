@@ -1,72 +1,49 @@
-
-:root {
-	background-color: #000 !important;
-}
-
 body {
-	background-color: #000
-}
-
-.contact_element {
-	margin: 4px 0;
+    background-color: #000
 }
 
 .console {
-	font-family: courier, monospace;
-	color: #fff;
-	width: 40%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 128px;
-	font-size: 1em;
+    font-family: courier, monospace;
+    color: #fff;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 128px;
+    font-size: 1em;
 }
 
 .console p {
-	line-height: 140%;
+    line-height: 140%;
 }
 
-a {
-	color: #0bc;
-	text-decoration: none;
+a, .blue-font {
+    color: #0bc;
+    text-decoration: none;
 }
 
-.a {
-	color: #0f0;
+.green-font {
+    color: #0f0;
 }
 
-.c {
-	color: #0bc;
+.pink-font {
+    color: #ff0096;
 }
 
-.b {
-	color: #ff0096;
-}
-
-.k {
-    	animation: change 1s;
-}
-
-@keyframes change {
-    	0%  { color:  #0f0; }
-    	50% { color:  #0f0; }
-    	99% { color: black; }
+.contact-element {
+    margin: 4px 0;
 }
 
 /* Make sure console adjusts to mobile screens */
 @media screen and (max-width: 600px) {
-
-	.console {
-		width: 90%;
-		margin-top: 32px;
-	}
-
+    .console {
+        width: 90%;
+        margin-top: 32px;
+    }
 }
 
 @media screen and (max-width: 1400px) {
-
-	.console {
-		margin-top: 64px;
-		width:80%;
-	}
-
+    .console {
+        margin-top: 64px;
+        width: 80%;
+    }
 }
