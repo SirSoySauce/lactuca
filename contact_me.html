@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Ivo Cavelti - Contact Me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="index.css">
     <script defer data-domain="cavelti.dev" src="https://analytics.cavelti.dev/js/plausible.js"></script>
-  </head>
-  <body>
-    <script src="jquery.min.js"></script>
-    <script src="contact_me.js"></script>
-    <a rel="me" href="https://swiss.social/@ivocavelti"></a>    
-    <div id="console">
-      <noscript>
+</head>
+<body>
+<div id="dynamic-console" class="console">
+</div>
+<div id="static-console" class="console">
+    <noscript id="console-content">
         <span class="a">ivo@cavelti-host</span>:<span class="b">~</span><span class="c">$</span> cd ivo_cavelti/about_me<br>
-        <span class="a">ivo@cavelti-host</span>:<span class="b">~/ivo_cavelti/about_me</span><span class="c">$</span> cat contact_me.txt<br/><br/>
+        <span class="a">ivo@cavelti-host</span>:<span class="b">~/ivo_cavelti/about_me</span><span class="c">$</span>
+        cat contact_me.txt<br/><br/>
 
         <p>You can reach me on these platforms:</p>
         <p class="contact_element"><a href="https://swiss.social/@ivocavelti">Mastodon</a></p>
@@ -22,8 +22,11 @@
         <p class="contact_element">E-Mail: contact[at]cavelti.dev</p>
         <br/>
         <a href="index.html">Go back</a>
-      </noscript>
-    </div>
+    </noscript>
+</div>
+<script src="index.js"></script>
 
-  </body>
+</body>
 </html>
+
+

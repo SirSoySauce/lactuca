@@ -11,7 +11,7 @@ body {
 	margin: 4px 0;
 }
 
-#console {
+.console {
 	font-family: courier, monospace;
 	color: #fff;
 	width: 40%;
@@ -19,6 +19,10 @@ body {
 	margin-right: auto;
 	margin-top: 128px;
 	font-size: 1em;
+}
+
+.console p {
+	line-height: 140%;
 }
 
 a {
@@ -51,7 +55,7 @@ a {
 /* Make sure console adjusts to mobile screens */
 @media screen and (max-width: 600px) {
 
-	#console {
+	.console {
 		width: 90%;
 		margin-top: 32px;
 	}
@@ -60,7 +64,7 @@ a {
 
 @media screen and (max-width: 1400px) {
 
-	#console {
+	.console {
 		margin-top: 64px;
 		width:80%;
 	}

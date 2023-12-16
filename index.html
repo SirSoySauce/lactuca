@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Ivo Cavelti</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="index.css">
     <script defer data-domain="cavelti.dev" src="https://analytics.cavelti.dev/js/plausible.js"></script>
-  </head>
-  <body>
-    <script src="jquery.min.js"></script>
-    <script src="index.js"></script>
-    <a rel="me" href="https://swiss.social/@ivocavelti"></a>    
-    <div id="console">
-      <noscript>
-        <span class="a">ivo@cavelti-host</span>:<span class="b">~</span><span class="c">$</span> cd ivo_cavelti/about_me<br/>
-        <span class="a">ivo@cavelti-host</span>:<span class="b">~/ivo_cavelti/about_me</span><span class="c">$</span> cat ivo-cavelti.txt<br/><br/>
+</head>
+<body>
+<a rel="me" href="https://swiss.social/@ivocavelti"></a>
+<div id="dynamic-console" class="console">
+</div>
+<div id="static-console" class="console">
+    <noscript id="console-content">
+        <p><span class="a">ivo@cavelti-host</span>:<span class="b">~</span><span class="c">$</span> cd
+            ivo_cavelti/about_me</br>
+            <span class="a">ivo@cavelti-host</span>:<span class="b">~/ivo_cavelti/about_me</span><span
+                    class="c">$</span> cat ivo-cavelti.txt</p>
 
         <p>Hey There! I am Ivo Cavelti.</p>
-        <p>Currently, I am doing my part-time bachelor in Computer Science at the University of Applied Sciences "OST" in Rapperswil. The days of the week when I'm not studying next to Lake Zurich, I work for the Swiss telecom company <a href="https://www.swisscom.ch/">Swisscom</a>.</p>
-        Mainly, I work with Java / Spring, Python or Angular / ReactJS. But I am always on the lookout for new interesting technologies.</p>
+        <p>Currently, I am doing my part-time bachelor in Computer Science at the University of Applied Sciences "OST"
+            in Rapperswil. The days of the week when I'm not studying next to Lake Zurich, I work for the Swiss telecom
+            company <a href="https://www.swisscom.ch/">Swisscom</a>.</p>
+        <p>Mainly, I work with Java / Spring, Python or Angular / ReactJS. But I am always on the lookout for new
+            interesting technologies.</p>
         <p>Most of my projects can be found on <a href="https://github.com/SirSoySauce">GitHub</a>.</p>
 
         <p><a href="contact_me.html">Here</a> you can find out how to reach me!</p>
 
         <p>Have a nice day!</p>
-      </noscript>
-    </div>
+    </noscript>
+</div>
 
-  </body>
+<script src="index.js"></script>
+</body>
 </html>
